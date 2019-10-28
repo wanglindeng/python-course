@@ -1,1 +1,266 @@
 ##10.24课后实践##
+>>1.name = {'a','b','c','d'}
+age = {10,20,30,40}
+for i in range(len(name)):
+print(name[i],age[i])
+
+2.name = {'a','b','c','d'}
+age = {10,20,30,40}
+for name,age in zip (name,age):
+print(name,age)
+d 40
+a 10
+c 20
+b 30
+
+3.a = list(zip(name,age))
+a
+[('d', 40), ('a', 10), ('c', 20), ('b', 30)]
+
+4.name = ['a','b','c','d']
+#for i in range(len(name)):
+ #   print(i+1,name[i])
+i=1
+for name in name:
+    print(i,name)
+i+=1
+1 a
+2 b
+3 c
+4 d
+
+5.name = ['a','b','c','d']
+for i ,name in enumerate(name):
+print(i,name)
+0 a
+1 b
+2 c
+3 d
+
+6.a = list(enumerate(name))
+a
+[(0, 'd')]
+
+7.a = list(range(0,10))
+b = list()
+for item in a:
+    b.append(item*item)  
+print(a)
+print(b)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+8.b = [item*item for item in range(0,10)]
+b
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+9.a = [item*2 for item in range(0,100) if item%3==0]
+print(a)
+[0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96, 102, 108, 114, 120, 126, 132, 138, 144, 150, 156, 162, 168, 174, 180, 186, 192, 198]
+
+10.coordinates = []
+for x in range(0,10):
+    for y in range(0,10):
+        coordinates.append((x,y))      
+print(coordinates
+[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9)]
+
+11.coordinates = [(x,y) for x in range(0,10)  for y in range(0,10)]
+print(coordinates)
+[(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (2, 0), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7), (2, 8), (2, 9), (3, 0), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (3, 7), (3, 8), (3, 9), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7), (4, 8), (4, 9), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7), (5, 8), (5, 9), (6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7), (6, 8), (6, 9), (7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7), (7, 8), (7, 9), (8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8), (8, 9), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9)]
+
+12.girls = ['alice','bernice','clarice']
+boys = ['chris','arnold','bob']
+result = [boy + '+' + girl for boy in boys for girl in girls if boy[0]==girl[0]]
+print(result)
+['chris+clarice', 'arnold+alice', 'bob+bernice']
+
+13.squares = {i:i**2 for i in range(0,10)}
+print(squares)
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+14.squares[5]
+25
+
+15.a = [1,2,3]
+b = a
+b is a
+True
+
+16.a = None
+b 
+[1, 2, 3]
+
+17.b = None
+b is a
+True
+
+18.a = [1,2,3]
+b = a
+del a
+b
+[1, 2, 3]
+
+19.exec('print("hello,,word")')
+hello,,word
+
+20.scope = {}
+exec('y = 1',scope)
+Y
+9
+
+20.scope['y']
+1
+
+21.eval('1+2+3')
+6
+
+22.expr = input('please input an expression: ')
+print(eval(expr))
+please input an expression: hello
+
+23.def hello(name):
+   （描述函数的功能） 'say to somebody whose name is defined by name'
+    print('hello,' + name +'!')
+
+24.hello('deng')
+hello,deng!
+
+25.hello?（对hello的功能进行查看）
+
+26.callable(hello)（判断是否是函数）
+True
+
+27.print(hello('deng'))
+hello,deng!
+None
+28.def print_banner(text,width):
+    print('*' * width)
+    print(text.center(width - 2).center(width,'*'))
+    print('*' * width)
+print_banner('hello',30)
+******************************
+*           hello            *
+******************************
+
+29.ef print_banner(text,width):
+    symbol = '#'
+    print(symbol * width)
+    print(text.center(width - 2).center(width,symbol))
+    print(symbol * width)
+print_banner('hello',30)
+##############################
+#           hello            #
+##############################
+
+30.fibs = [1,1]
+for i in range(0,10)
+    fibs.append(fibs[-2] + fibs[-1])
+print(fibs)
+
+31.def fibs(num):
+    result = [1,1]
+    for i in range(num-2)
+        result.append(result[-2] + result[-1])
+    return result
+num = int(input('how many fibonacci numbers do you want: '))
+ptint(fibs(num))
+
+32.def fibs(index):
+    result = [1,1]
+    for i in range(num - 2)
+        result.append(result[-2] + result[-1])
+    return result[-1]
+num = int(input('how many step: '))
+ptint('total number of different ways:{}'.format(fibs(num)))
+
+33.def fibs(index):
+    item_before_last,last_item = 1,1
+    for i in range(num - 2)
+        item_before_last,last_item = last_item, item_before_last+last_item
+return last_item
+num = int(input('how many step: '))
+ptint('total number of different ways:{}'.format(fibs(num)))
+
+34.setup_ants_positions()
+while not is_bar_empty():
+    update_bar()
+    show_bar()
+    wait()
+update_ants_positions()
+
+35.def change_it(a):
+    a = a*2   
+x = 2
+change_it(x)
+print(x)
+2
+
+36.def change_it(a):
+    a[0] = 'hello'
+x = ['hello','hi']
+change_it(x)
+print(x)
+['hello', 'hi']
+
+37.def hello(greeting,name):
+    print('{},{}!'.format(greeting,name))
+hello('hi','world')
+hi,world!
+
+38.hello(greeting= 'hi',name='world')
+hi,world!
+
+39.hello(name='world',greeting= 'hi')
+hi,world!
+
+40.hello(name='world',greeting= 'hi')
+hi,world!
+
+41.def hello(greeting= 'hello',name= 'world'):
+    print('{},{}!'.format(greeting,name)
+          
+hello()
+hello('hi')
+hello('hi','deng')
+hello(name='deng')
+
+42.def interval(start,end,=None,strp=1):
+    if end is None
+        start,end = 0,start
+    result = []
+    i = start
+    while i < end
+        result.append(i)
+        i += step
+    return result
+print(interval(8))
+print(interval(2,8))
+print(interval(2,8,2))
+
+43.def sum(*params):
+    result = 0
+    for item in params:
+        result +=item
+    return result
+
+assert(sum(1,2,3,4) ==10)
+print('test ok.')
+
+44.def print_sum(*params,label='sum'):
+    result = 0
+    for item in params:
+        result +=item
+    print(label,result)
+print_sum(1,2,3,4,label='和')
+和 10
+
+45.x = [1,2,3,4,5]
+sum(*x)
+15
+
+46.def foo(): x = 42    
+x = 1
+f
+
+>>
