@@ -1,6 +1,6 @@
 # python-course
 
-##10.28课后实践##
+##9.26日课后实践##
 >>
 1.tuple=('abcd',786,2.23,'runoob',70.2)
 print(tuple)
